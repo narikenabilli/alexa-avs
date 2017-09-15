@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PREDIX - INTEGRATION WITH ALEXA VOICE SERVICE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <span class="navbar-text brand">Predix Surveys</span>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+          <li id="link-help"><a href="#help">Help</a></li>
+          <li id="link-logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Help popup -->
+    <div id="help">
+      <div class="speech-bubble speech-bubble-help">
+        <button id="help-close" class="btn btn-primary">Close</button>
+        <h2>Help</h2>
+        <h3>If you are out of survey</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><pre>start Predix Survey</pre></td>
+              <td>Start survey from the beginning.</td>
+            </tr>
+            <tr>
+              <td><pre>ask Predix Survey to continue</pre></td>
+              <td>Continue survey if it was started and not finished. Useful when you excidently left survey.</td>
+            </tr>
+            <tr>
+              <td><pre>tell Predix Survey that [you answer]</pre></td>
+              <td>Give your answer if survey was started and not finished. Useful when you excidently left survey.</td>
+            </tr>
+            <tr>
+              <td><pre>ask Predix Survey for help</pre></td>
+              <td>Provides help about how to start survey and answer questions.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>During survey</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><pre>cancel</pre>, <pre>forget it</pre>, <pre>never mind</pre>, <br><pre>stop</pre>, <pre>off</pre>, <pre>shut up</pre></td>
+              <td>Finishes survey saving already answered questions.</td>
+            </tr>
+            <tr>
+              <td><pre>help me</pre></td>
+              <td>Provides help about how to answer questions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" id="login-form" method="get">
+      <div class="form-group">
+        <div class="speech-bubble">
+          <input type="text" class="form-control" id="user-name" name="user_name" placeholder="Please, enter your name...">
+        </div>
+      </div>
+      <button type="submit" id="btn-login" class="button button-login" disabled><span>Login with Amazon</span></button>
+    </form>
+
+    <!-- Message bubble -->
+    <div id="message" class="speech-bubble error">Please, let this page to access your microphone.</div>
+
+    <!-- Hold & Speek button -->
+    <button id="btn-talk" class="button" disabled><span>Hold &amp; Speak</span></button>
+
+    <!-- Loader spinner -->
+    <div id="loader" class="button button-loader">
+      <span>Processing...</span>
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+
+    <!-- Playing equaliser -->
+    <div id="equaliser" class="button button-equaliser">
+      <span>Playing...</span>
+      <div class="equaliser-container">
+        <ol class="equaliser-column">
+          <li class="colour-bar"></li>
+        </ol>
+        <ol class="equaliser-column">
+          <li class="colour-bar"></li>
+        </ol>
+        <ol class="equaliser-column">
+          <li class="colour-bar"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- // .container -->
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: linear-gradient(-45deg, #6a85b6 0%, #bac8e0 100%);
+}
+
+.brand {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 50px;
+}
+
+/*
+  General circle button class
+ */
+a.button,
+.button {
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+  border-radius: 50%;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  border: 0;
+  display: block;
+  outline: none;
+  float: left;
+  height: 270px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.button:hover {
+  background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+  background-image: linear-gradient(top, #fff, #f4f1ee);
+  color:#0088cc;
+}
+
+.button:active{
+  background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+  background-image: linear-gradient(top, #efedec, #f7f4f4);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.button > span {
+  color:#83d244;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover > span{
+  text-shadow:0px 0px 6px #83d244;
+}
+
+.button:active > span {
+  color:#dbd2d2;
+  text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+}
+
+/*
+  Login button
+ */
+.button.button-login > span {
+  color:#f99e4e;
+}
+
+.button.button-login:hover > span {
+  text-shadow:0px 0px 6px #f99e4e;
+}
+
+.button.button-login:active > span {
+  text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+}
+
+/*
+  Loader view button
+ */
+.button.button-loader > span,
+.button.button-loader:hover > span {
+  color: #000;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+}
+
+.button.button-loader {
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+}
+
+/*
+  Equaliser view button
+ */
+.button.button-equaliser > span,
+.button.button-equaliser:hover > span {
+  color: #000;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+}
+
+.button.button-equaliser {
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+}
+
+/*
+  Disabled button one style for all
+ */
+.button[disabled],
+.button[disabled]:hover,
+.button[disabled]:active,
+.button[disabled]:active:hover {
+  background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+  background-image: linear-gradient(top, #efedec, #f7f4f4);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.button[disabled] > span,
+.button[disabled]:hover > span {
+  color:#dbd2d2;
+  text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+}
+
+/*
+  Spinner animation for loader
+ */
+.spinner {
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #333;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+.speech-bubble {
+  color: #fff;
+  position: absolute;
+  background: #00aabb;
+  border-radius: .4em;
+  padding: 30px;
+  bottom: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-bottom: 150px;
+  width: 300px;
+}
+
+.speech-bubble.error {
+  background: #bb4400;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-top-color: #00aabb;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -8px;
+  margin-bottom: -16px;
+}
+
+.speech-bubble.error:after {
+  border-top-color: #bb4400;
+}
+
+/*
+  Equaliser animation
+ */
+.equaliser-container {
+  height: 50%;
+  width: 30%;
+  left: 35%;
+  top: 25%;
+  position: absolute;
+}
+
+.colour-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: #333;
+}
+
+.equaliser-column {
+  width: 25%;
+  float: left;
+  margin: 0 8% 0 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  list-style-type: none;
+}
+
+.equaliser-column:nth-child(1) .colour-bar {
+  animation: color-bar 1s 0.5s ease-out alternate infinite;
+}
+
+.equaliser-column:nth-child(2) .colour-bar {
+  animation: color-bar 1s 1s ease-out alternate infinite;
+}
+
+.equaliser-column:nth-child(3) .colour-bar {
+  animation: color-bar 1s 0.75s ease-out alternate infinite;
+}
+
+.equaliser-column:last-child {
+  margin-right: 0;
+}
+
+@keyframes color-bar {
+  0% {
+    height: 10%;
+  }
+  10% {
+    height: 30%;
+  }
+  20% {
+    height: 50%;
+  }
+  30% {
+    height: 20%;
+  }
+  40% {
+    height: 70%;
+  }
+  50% {
+    height: 90%;
+  }
+  60% {
+    height: 30%;
+  }
+  70% {
+    height: 80%;
+  }
+  80% {
+    height: 50%;
+  }
+  90% {
+    height: 30%;
+  }
+  100% {
+    height: 10%;
+  }
+}
+
+#login-form .speech-bubble {
+  display: block;
+}
+
+/*
+  Help popup
+ */
+#help {
+  position: relative;
+  z-index: 10;
+}
+
+#help .table pre {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#help .table tbody td:first-child {
+  white-space: nowrap;
+  width: 1%;
+}
+
+#help-close {
+  right: 30px;
+  position: absolute;
+  top: 50px;
+}
+
+.speech-bubble.speech-bubble-help {
+  display: block;
+  margin: 0;
+  position: static;
+  width: 100%;
+}
+
+/*
+  Hide elements by default
+ */
+.button,
+#link-logout,
+.speech-bubble,
+#login-form,
+#help,
+#link-help {
+  display: none;
+}

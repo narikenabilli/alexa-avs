@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const app = require('../src/server/app');
+const logger = require('../src/server/utils/logger');
+
+const port = process.env.PORT || '3000';
+app.set('port', port);
+
+// standard error handling functions.
+app.use(function (req, res, next) {
+  // Suppress /favicon.ico errors
+  var favicon = "favicon.ico";
+  if (req.url.slice(-favicon.length) != favicon) {
+    var err = new Error('Not Found: ' + req.url);
+    err.status = 404;
+    next(err);
+  } else {
+    next();
+  }
+});
+
+app.use(function (err, req, res, next) {
+  logger.log(err.message);
+  res.status(err.status || 500);
+  res.send('error: ' + err.message);
+});
+
+app.listen(app.get('port'), function () {
+  logger.info(`Example app listening on port ${port}!\n`);
+});

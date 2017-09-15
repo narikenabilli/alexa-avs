@@ -1,0 +1,96 @@
+[
+  {
+    "uri": "/survey/1",
+    "title": "Favorite things.",
+    "questions": [
+      {
+        "id": "1",
+        "text": "What is your favorite soft drink?"
+      },
+      {
+        "id": "2",
+        "text": "What alcohol drink you prefer?"
+      },
+      {
+        "id": "3",
+        "text": "What is your favorite car brand?"
+      },
+      {
+        "id": "4",
+        "text": "Do you prefer day or night time?"
+      },
+      {
+        "id": "5",
+        "text": "Which pet you prefer to have?"
+      },
+      {
+        "id": "6",
+        "text": "What is your favorite name?"
+      },
+      {
+        "id": "7",
+        "text": "What is your favorite color?"
+      }
+    ]
+  },
+  {
+    "uri": "/survey/2",
+    "title": "Product satisfaction.",
+    "questions": [
+      {
+        "id": "1",
+        "text": "How do you rate the quality of our product?"
+      },
+      {
+        "id": "2",
+        "text": "Did our product meet your expectations?"
+      },
+      {
+        "id": "3",
+        "text": "What did you like in our product?"
+      },
+      {
+        "id": "4",
+        "text": "What would you improve in our product?"
+      },
+      {
+        "id": "5",
+        "text": "Would you recommend it to your friends?"
+      },
+      {
+        "id": "6",
+        "text": "How often do you use it?"
+      },
+      {
+        "id": "7",
+        "text": "How long have you been using it?"
+      },
+      {
+        "id": "8",
+        "text": "How did you know about our product?"
+      },
+      {
+        "id": "9",
+        "text": "Do you know better solution from another brands?"
+      },
+      {
+        "id": "10",
+        "text": "Would you like to get occasional emails with our news?"
+      }
+    ]
+  },
+  {
+    "uri": "/survey/3",
+    "title": "Simple and quick.",
+    "questions": [
+      {
+        "id": "1",
+        "text": "How are you?"
+      },
+      {
+        "id": "2",
+        "text": "What time is it now?"
+      }
+    ]
+  }
+]

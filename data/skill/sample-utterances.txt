@@ -1,0 +1,7 @@
+LiteralAnswerIntent my answer is {no|LiteralAnswer}
+LiteralAnswerIntent my answer is {yes|LiteralAnswer}
+LiteralAnswerIntent {no|LiteralAnswer}
+LiteralAnswerIntent {yes|LiteralAnswer}
+LiteralAnswerIntent {never|LiteralAnswer}
+LiteralAnswerIntent {not yet|LiteralAnswer}
+LiteralAnswerIntent {maybe|LiteralAnswer}
